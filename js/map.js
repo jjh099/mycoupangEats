@@ -6,6 +6,12 @@ var mapOption = {
 
 var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
 
+// 버튼 클릭에 따라 지도 확대, 축소 기능을 막거나 풀고 싶은 경우에는 map.setZoomable 함수를 사용합니다
+function setZoomable(zoomable) {
+  // 마우스 휠로 지도 확대,축소 가능여부를 설정합니다
+  map.setZoomable(zoomable);
+}
+
 var imageSrc =
   "https://cdn1.iconfinder.com/data/icons/ecommerce-61/48/eccomerce_-_location-1024.png"; // 마커이미지의 주소입니다
 var imageSize = new kakao.maps.Size(45, 45); // 마커이미지의 크기입니다
